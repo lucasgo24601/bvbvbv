@@ -29,9 +29,6 @@ window.boot = function () {
         cc.view.enableRetina(true);
         cc.view.resizeWithBrowserSize(true);
 
-        if (cc.sys.isBrowser) {
-            setLoadingDisplay();
-        }
 
         if (cc.sys.isMobile) {
             if (settings.orientation === 'landscape') {
