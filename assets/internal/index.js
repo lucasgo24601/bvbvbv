@@ -1,20 +1,28 @@
-System.register("chunks:///_virtual/internal",[],(function(){return{execute:function(){}}}));
-
-(function(r) {
-  r('virtual:///prerequisite-imports/internal', 'chunks:///_virtual/internal'); 
-})(function(mid, cid) {
-    System.register(mid, [cid], function (_export, _context) {
-    return {
-        setters: [function(_m) {
-            var _exportObj = {};
-
-            for (var _key in _m) {
-              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
-            }
-      
-            _export(_exportObj);
-        }],
-        execute: function () { }
-    };
-    });
-});
+(function e(t, n, r) {
+  function s(o, u) {
+    if (!n[o]) {
+      if (!t[o]) {
+        var b = o.split("/");
+        b = b[b.length - 1];
+        if (!t[b]) {
+          var a = "function" == typeof __require && __require;
+          if (!u && a) return a(b, !0);
+          if (i) return i(b, !0);
+          throw new Error("Cannot find module '" + o + "'");
+        }
+        o = b;
+      }
+      var f = n[o] = {
+        exports: {}
+      };
+      t[o][0].call(f.exports, function(e) {
+        var n = t[o][1][e];
+        return s(n || e);
+      }, f, f.exports, e, t, n, r);
+    }
+    return n[o].exports;
+  }
+  var i = "function" == typeof __require && __require;
+  for (var o = 0; o < r.length; o++) s(r[o]);
+  return s;
+})({}, {}, []);
